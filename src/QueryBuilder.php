@@ -34,7 +34,6 @@
             $sql_query = self::$Database->createConnection()->query($query_string);
             while ($data = $sql_query->fetch_array()){ $response[] = $data; }
             mysqli_free_result($sql_query);
-            self::$Database->createConnection()->close();
             return $response;
         }
 
